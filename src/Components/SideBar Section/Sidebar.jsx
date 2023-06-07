@@ -22,7 +22,7 @@ const Sidebar = () => {
         <ul className="menuLists grid">
 
           <li className="listItem">
-            <a href="#" className='menuLink flex'>
+            <a href='/' className='menuLink flex'>
               <IoMdSpeedometer className="icon"/>
               <span className="smallText">
                 Dash board
@@ -31,10 +31,10 @@ const Sidebar = () => {
           </li>
 
           <li className="listItem">
-            <a href="#" className='menuLink flex'>
+            <a href='/analytics' className='menuLink flex'>
               <CgProfile className="icon"/>
               <span className="smallText">
-                Profile
+                Analytics
               </span>
             </a>
           </li>
