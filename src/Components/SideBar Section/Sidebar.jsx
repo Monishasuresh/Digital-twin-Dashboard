@@ -7,6 +7,7 @@ import plantlogo from '../../LoginAssets/plantlogo3.png'
 import {IoMdSpeedometer} from 'react-icons/io'
 import {CgProfile} from 'react-icons/cg'
 
+
 const Sidebar = () => {
   return (
     <div className='sideBar grid'>
@@ -22,16 +23,19 @@ const Sidebar = () => {
         <ul className="menuLists grid">
 
           <li className="listItem">
-            <a href="#" className='menuLink flex'>
+            <a href="/" className='menuLink flex'>
               <IoMdSpeedometer className="icon"/>
               <span className="smallText">
                 Dash board
               </span>
             </a>
+            {/* <button onClick={handleClickA}>Show Component A</button> */}
+
           </li>
 
           <li className="listItem">
-            <a href="#" className='menuLink flex'>
+            <a href="/analytics" className='menuLink flex' >
+
               <CgProfile className="icon"/>
               <span className="smallText">
                 Profile
