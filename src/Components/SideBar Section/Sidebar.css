@@ -20,7 +20,7 @@
 .sideBar {
   background: var(--whiteColor);
   box-shadow: 1px 0px 4px var(--greyText);
-  width: 18%;
+  width: 20%;
   height: 100%;
   gap: 3rem;
   overflow: auto;

@@ -23,8 +23,8 @@
   padding-top: 2rem;
   background: var(--bgColor);
   position: relative;
-  width: 60vw;
-  height: 23vw;
+  width: 80vw;
+  height: 50vw;
   align-items: center;
   justify-content: center;
   overflow: hidden;
@@ -158,5 +158,157 @@
   top: 73%;
 }
 .listingSection .paramContainer .moisture-container .percentageText .infoicon {
+  margin-right: 0.3rem;
+}
+
+.listingSection .paramContainer .luminosity-container {
+  width: 170px;
+  height: 145px;
+  display: flex;
+  padding-top: 2rem;
+  background: white;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 1rem;
+  position: absolute;
+  top: 7rem;
+  left: 51rem;
+  box-shadow: 2px 2px 8px var(--greyText);
+}
+.listingSection .paramContainer .luminosity-container img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.listingSection .paramContainer .luminosity-container .temperature-percentage {
+  color: var(--blackColor);
+  font-weight: 500;
+}
+.listingSection .paramContainer .luminosity-container .percentageText {
+  color: var(--blackColor);
+  font-size: x-small;
+  position: absolute;
+  top: 73%;
+}
+.listingSection .paramContainer .luminosity-container .percentageText .infoicon {
+  margin-right: 0.3rem;
+}
+
+.listingSection .paramContainer .N-container {
+  width: 170px;
+  height: 145px;
+  display: flex;
+  padding-top: 2rem;
+  background: white;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 1rem;
+  position: absolute;
+  top: 20rem;
+  left: 12rem;
+  box-shadow: 2px 2px 8px var(--greyText);
+}
+.listingSection .paramContainer .N-container img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.listingSection .paramContainer .N.temperature-percentage {
+  color: var(--blackColor);
+  font-weight: 500;
+}
+.listingSection .paramContainer .N.percentageText {
+  color: var(--blackColor);
+  font-size: x-small;
+  position: absolute;
+  top: 73%;
+}
+.listingSection .paramContainer .N.percentageText .infoicon {
+  margin-right: 0.3rem;
+}
+
+.listingSection .paramContainer .P-container {
+  width: 170px;
+  height: 145px;
+  display: flex;
+  padding-top: 2rem;
+  background: white;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 1rem;
+  position: absolute;
+  top: 20rem;
+  left: 28rem;
+  box-shadow: 2px 2px 8px var(--greyText);
+}
+.listingSection .paramContainer .P-container img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.listingSection .paramContainer .P.temperature-percentage {
+  color: var(--blackColor);
+  font-weight: 500;
+}
+.listingSection .paramContainer .P.percentageText {
+  color: var(--blackColor);
+  font-size: x-small;
+  position: absolute;
+  top: 73%;
+}
+.listingSection .paramContainer .P.percentageText .infoicon {
+  margin-right: 0.3rem;
+}
+
+.listingSection .paramContainer .K-container {
+  width: 170px;
+  height: 145px;
+  display: flex;
+  padding-top: 2rem;
+  background: white;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 1rem;
+  position: absolute;
+  top: 20rem;
+  left: 44rem;
+  box-shadow: 2px 2px 8px var(--greyText);
+}
+.listingSection .paramContainer .K-container img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.listingSection .paramContainer .K.temperature-percentage {
+  color: var(--blackColor);
+  font-weight: 500;
+}
+.listingSection .paramContainer .K.percentageText {
+  color: var(--blackColor);
+  font-size: x-small;
+  position: absolute;
+  top: 73%;
+}
+.listingSection .paramContainer .N.percentageText .infoicon {
   margin-right: 0.3rem;
 }/*# sourceMappingURL=listing.css.map */
