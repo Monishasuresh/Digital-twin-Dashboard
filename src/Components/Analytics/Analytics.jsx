@@ -1,5 +1,5 @@
 import React from 'react'
-import '../../app.css'
+import '../../App.css'
 
 import Body from '../Body1/Body1'
 import Sidebar from '../SideBar Section/Sidebar'
