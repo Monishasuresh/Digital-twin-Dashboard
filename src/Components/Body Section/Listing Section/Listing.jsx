@@ -210,7 +210,7 @@ const Listing = () => {
             </div>
           </div>
 
-          <div className="N-container">
+           <div className="N-container">
 
             <img src={nit} alt="leaf"/>
             {N !== null ? (
@@ -258,7 +258,7 @@ const Listing = () => {
             < BsInfoCircle className ="infoicon"/>
               <span>Potassium</span>
             </div>
-          </div>
+          </div> 
 
 
 

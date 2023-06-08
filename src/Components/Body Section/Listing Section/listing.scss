@@ -27,8 +27,8 @@
         padding-top: 2rem;
         background: var(--bgColor);
         position: relative;
-        width: 60vw;
-        height: 23vw;
+        width: 75vw;
+        height: 42vw;
         
         align-items: center;
         justify-content: center;
@@ -160,6 +160,182 @@
             border-radius: 1rem;
             position: absolute;
             top: 7rem;
+            left: 35rem;
+            box-shadow: 2px 2px 8px var(--greyText);
+
+            
+            img{
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    position: absolute;
+                    top: 15%;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+
+
+            .temperature-percentage{
+                color: var(--blackColor);
+                font-weight:500;                
+            }
+
+            .percentageText{
+                .infoicon{
+                    margin-right: .3rem;
+                }
+                color: var(--blackColor);
+                font-size:x-small;
+                position: absolute;
+                top: 73%;
+            }
+
+        }
+
+        .luminosity-container{
+            width: 170px;
+            height: 145px;
+            display: flex;
+            padding-top: 2rem;
+            background: white;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            border-radius: 1rem;
+            position: absolute;
+            top: 7rem;
+            left: 51rem;
+            box-shadow: 2px 2px 8px var(--greyText);
+
+            
+            img{
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    position: absolute;
+                    top: 15%;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+
+
+            .temperature-percentage{
+                color: var(--blackColor);
+                font-weight:500;                
+            }
+
+            .percentageText{
+                .infoicon{
+                    margin-right: .3rem;
+                }
+                color: var(--blackColor);
+                font-size:x-small;
+                position: absolute;
+                top: 73%;
+            }
+
+        }
+
+        .N-container{
+            width: 170px;
+            height: 145px;
+            display: flex;
+            padding-top: 2rem;
+            background: white;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            border-radius: 1rem;
+            position: absolute;
+            top: 21rem;
+            left: 3rem;
+            box-shadow: 2px 2px 8px var(--greyText);
+
+            
+            img{
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    position: absolute;
+                    top: 15%;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+
+
+            .temperature-percentage{
+                color: var(--blackColor);
+                font-weight:500;                
+            }
+
+            .percentageText{
+                .infoicon{
+                    margin-right: .3rem;
+                }
+                color: var(--blackColor);
+                font-size:x-small;
+                position: absolute;
+                top: 73%;
+            }
+
+        }
+
+        .P-container{
+            width: 170px;
+            height: 145px;
+            display: flex;
+            padding-top: 2rem;
+            background: white;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            border-radius: 1rem;
+            position: absolute;
+            top: 21rem;
+            left: 19rem;
+            box-shadow: 2px 2px 8px var(--greyText);
+
+            
+            img{
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    position: absolute;
+                    top: 15%;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+
+
+            .temperature-percentage{
+                color: var(--blackColor);
+                font-weight:500;                
+            }
+
+            .percentageText{
+                .infoicon{
+                    margin-right: .3rem;
+                }
+                color: var(--blackColor);
+                font-size:x-small;
+                position: absolute;
+                top: 73%;
+            }
+
+        }
+
+        .K-container{
+            width: 170px;
+            height: 145px;
+            display: flex;
+            padding-top: 2rem;
+            background: white;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            border-radius: 1rem;
+            position: absolute;
+            top: 21rem;
             left: 35rem;
             box-shadow: 2px 2px 8px var(--greyText);
 

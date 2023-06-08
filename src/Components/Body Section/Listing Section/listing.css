@@ -23,8 +23,8 @@
   padding-top: 2rem;
   background: var(--bgColor);
   position: relative;
-  width: 80vw;
-  height: 50vw;
+  width: 75vw;
+  height: 42vw;
   align-items: center;
   justify-content: center;
   overflow: hidden;
@@ -160,7 +160,6 @@
 .listingSection .paramContainer .moisture-container .percentageText .infoicon {
   margin-right: 0.3rem;
 }
-
 .listingSection .paramContainer .luminosity-container {
   width: 170px;
   height: 145px;
@@ -198,7 +197,6 @@
 .listingSection .paramContainer .luminosity-container .percentageText .infoicon {
   margin-right: 0.3rem;
 }
-
 .listingSection .paramContainer .N-container {
   width: 170px;
   height: 145px;
@@ -210,8 +208,8 @@
   overflow: hidden;
   border-radius: 1rem;
   position: absolute;
-  top: 20rem;
-  left: 12rem;
+  top: 21rem;
+  left: 3rem;
   box-shadow: 2px 2px 8px var(--greyText);
 }
 .listingSection .paramContainer .N-container img {
@@ -223,20 +221,19 @@
   left: 50%;
   transform: translateX(-50%);
 }
-.listingSection .paramContainer .N.temperature-percentage {
+.listingSection .paramContainer .N-container .temperature-percentage {
   color: var(--blackColor);
   font-weight: 500;
 }
-.listingSection .paramContainer .N.percentageText {
+.listingSection .paramContainer .N-container .percentageText {
   color: var(--blackColor);
   font-size: x-small;
   position: absolute;
   top: 73%;
 }
-.listingSection .paramContainer .N.percentageText .infoicon {
+.listingSection .paramContainer .N-container .percentageText .infoicon {
   margin-right: 0.3rem;
 }
-
 .listingSection .paramContainer .P-container {
   width: 170px;
   height: 145px;
@@ -248,8 +245,8 @@
   overflow: hidden;
   border-radius: 1rem;
   position: absolute;
-  top: 20rem;
-  left: 28rem;
+  top: 21rem;
+  left: 19rem;
   box-shadow: 2px 2px 8px var(--greyText);
 }
 .listingSection .paramContainer .P-container img {
@@ -261,20 +258,19 @@
   left: 50%;
   transform: translateX(-50%);
 }
-.listingSection .paramContainer .P.temperature-percentage {
+.listingSection .paramContainer .P-container .temperature-percentage {
   color: var(--blackColor);
   font-weight: 500;
 }
-.listingSection .paramContainer .P.percentageText {
+.listingSection .paramContainer .P-container .percentageText {
   color: var(--blackColor);
   font-size: x-small;
   position: absolute;
   top: 73%;
 }
-.listingSection .paramContainer .P.percentageText .infoicon {
+.listingSection .paramContainer .P-container .percentageText .infoicon {
   margin-right: 0.3rem;
 }
-
 .listingSection .paramContainer .K-container {
   width: 170px;
   height: 145px;
@@ -286,8 +282,8 @@
   overflow: hidden;
   border-radius: 1rem;
   position: absolute;
-  top: 20rem;
-  left: 44rem;
+  top: 21rem;
+  left: 35rem;
   box-shadow: 2px 2px 8px var(--greyText);
 }
 .listingSection .paramContainer .K-container img {
@@ -299,16 +295,16 @@
   left: 50%;
   transform: translateX(-50%);
 }
-.listingSection .paramContainer .K.temperature-percentage {
+.listingSection .paramContainer .K-container .temperature-percentage {
   color: var(--blackColor);
   font-weight: 500;
 }
-.listingSection .paramContainer .K.percentageText {
+.listingSection .paramContainer .K-container .percentageText {
   color: var(--blackColor);
   font-size: x-small;
   position: absolute;
   top: 73%;
 }
-.listingSection .paramContainer .N.percentageText .infoicon {
+.listingSection .paramContainer .K-container .percentageText .infoicon {
   margin-right: 0.3rem;
 }/*# sourceMappingURL=listing.css.map */
