@@ -38,7 +38,7 @@ const Sidebar = () => {
 
               <CgProfile className="icon"/>
               <span className="smallText">
-                Profile
+                Analytics
               </span>
             </a>
           </li>

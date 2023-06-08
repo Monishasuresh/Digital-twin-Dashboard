@@ -3,9 +3,8 @@ import './body.css'
 import Top from './Top Section/Top'
 import Listing from './Listing Section/Listing'
 import Activity from './Activity Section/Activity'
-import Sidebar from '../SideBar Section/Sidebar'
 
-const Body = () => {
+const Body1 = () => {
   return (
     <div className='mainContent'>
       <Top/>
@@ -18,4 +17,4 @@ const Body = () => {
   )
 }
 
-export default Body
+export default Body1

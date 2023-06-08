@@ -12,11 +12,11 @@ import{
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <div><Body/></div>
+    element: <div></div>
   },
   {
     path: '/analytics',
-    element: <div><Analytics/></div>
+    element: <div> <Analytics/></div>
   }
   
 ])
@@ -26,8 +26,8 @@ const App = () => {
   return (
     <div className='container'>
     <RouterProvider router={router}/>
-
        <Sidebar/> 
+       <Body/>
     </div>
   )
 }
