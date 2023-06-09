@@ -1,7 +1,7 @@
 import React from 'react'
 import '../../App.css'
 
-import Body from '../Body1/Body1'
+import BodyA from '../Body SectionAnalytics/BodyA'
 import Sidebar from '../SideBar Section/Sidebar'
 
 
@@ -9,7 +9,7 @@ const Analytics = () => {
   return (
     <div className='container'>
        <Sidebar/> 
-       <Body/>
+       <BodyA/>
     </div>
   )
 }

@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import './body1.css'
+import './bodyA.css'
 import Top from './Top Section/Top'
 import ImageUpload from './Analysis';
 

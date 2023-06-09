@@ -62,4 +62,50 @@
 
 .topdiv{
     justify-content: space-between;
+    .predict{
+       display: flex; 
+       justify-content: space-between;
+       padding-top: 2rem;
+    }
+    .soil{
+        width: 10rem;
+        height: 4rem;
+        border: 1px solid #0a0909;
+        background-color: rgb(59, 29, 135);
+        box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 4px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Arial, sans-serif;
+        color: #ccb1b1;
+        font-size: 18px;
+    }
+    .growth{
+        width: 10rem;
+        height: 4rem;
+        border: 1px solid #0a0909;
+        background-color: rgb(59, 29, 135);
+        box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 4px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Arial, sans-serif;
+        color: #ccb1b1;
+        font-size: 18px;
+    }
+    .imageview{
+        width: 600px;
+        height: 400px;
+        border: 1px solid #ddd;
+        background-color: #f9f9f9;
+        box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 4px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        padding-top: 2rem;
+    }
 }

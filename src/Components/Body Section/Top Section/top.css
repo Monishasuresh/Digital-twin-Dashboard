@@ -18,6 +18,9 @@
 }
 
 .topSection .headerSection {
+  display: flex;
+  padding-left: 2rem;
+  padding-top: 2rem;
   justify-content: space-between;
 }
 .topSection .headerSection .title h1 {
@@ -29,6 +32,6 @@
   font-size: var(--normalFontSize);
   color: var(--textColor);
   font-weight: 500;
-  padding-left: 0.5rem;
-  padding-top: 0.5rem;
+  padding-left: 2rem;
+  padding-top: 2rem;
 }/*# sourceMappingURL=top.css.map */

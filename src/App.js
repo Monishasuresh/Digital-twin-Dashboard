@@ -3,7 +3,6 @@ import './App.css'
 import Sidebar from './Components/SideBar Section/Sidebar'
 import Body from './Components/Body Section/Body'
 import Analytics from './Components/Analytics/Analytics'
-import Body1 from './Components/Body1/Body1'
 
 import{
   createBrowserRouter,

@@ -22,6 +22,7 @@
 
 .topSection{
     .headerSection{
+        display: flex;
         justify-content: space-between;
         
         .title{
@@ -35,8 +36,8 @@
                 font-size: var(--normalFontSize);
                 color: var(--textColor);
                 font-weight: 500;
-                padding-left: .5rem;
-                padding-top: .5rem;
+                padding-left: 2rem;
+                padding-top: 2rem;
             }
 
         }
