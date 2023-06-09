@@ -85,8 +85,7 @@ const ImageUpload = () => {
       </form>
       {uploadStatus && <p style={{color:'green', fontSize:'bold'}}>{uploadStatus}</p>}
       <div className='imageview'>
-    {selectedFile && <img src={URL.createObjectURL(selectedFile)} alt="Uploaded" style={{maxWidth:'100%'}} />}
-
+    {selectedFile && <img src={URL.createObjectURL(selectedFile)} alt="Uploaded"  />}
       </div >
       <div className='predict'>
         {soil && <p className='soil'>  {soil}</p>}
