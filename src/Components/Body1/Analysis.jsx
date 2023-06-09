@@ -1,10 +1,15 @@
 import React, { useState } from 'react';
+import '../Image/image.css'
 
 const ImageUpload = () => {
   const [selectedFile, setSelectedFile] = useState(null);
   const [uploadStatus, setUploadStatus] = useState('');
   const [imagePath, setImagePath] = useState('');
   const [results, setResults] = useState([]);
+  const [Growth, setGrowth] = useState([]);
+  const [soil, setSoil] = useState([]);
+  const [health, setHealth] = useState([]);
+  
 
   const handleFileChange = (event) => {
     setSelectedFile(event.target.files[0]);
@@ -50,7 +55,12 @@ const ImageUpload = () => {
 
       if (response.ok) {
         const data = await response.json();
-        setResults(data.results);
+        console.log("data: ",data)
+        console.log("results:" ,data.results)
+        // setResults(data.results);
+        setSoil(data.results[0]);
+        setGrowth(data.results[1]);
+        setHealth(data.results[2]);
       } else {
         console.log('Failed to fetch results');
       }
@@ -60,13 +70,28 @@ const ImageUpload = () => {
   };
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
+    <div className='topdiv'>
+      <form onSubmit={handleSubmit} >
         <input type="file" accept="image/*" onChange={handleFileChange} />
-        <button type="submit">Upload</button>
+        <button type="submit" className='upload-img'>Upload</button>
+        <button type='button' className='upload'
+            onClick={(e) => {
+            e.preventDefault();
+            if (typeof window !== 'undefined') {
+                window.location.href = "http://192.168.90.239/";
+            }
+            }}>Live Stream
+        </button>
       </form>
-      {uploadStatus && <p>{uploadStatus}</p>}
-      {selectedFile && <img src={URL.createObjectURL(selectedFile)} alt="Uploaded" />}
+      {uploadStatus && <p style={{color:'green', fontSize:'bold'}}>{uploadStatus}</p>}
+      <div className='imageview'>
+      {selectedFile && <img src={URL.createObjectURL(selectedFile)} alt="Uploaded" style={{maxWidth:'50%'}} />}
+
+      </div >
+      {/* {results && <p>{results}</p>} */}
+      {soil && <p style={{}}>Soil condition:  {soil}</p>}
+      {Growth && <p>Growth of plant: {Growth}</p>}
+      {/* {health && <p>Health of plant: {health}</p>} */}
       {/* {imagePath && (
         <div>
 
