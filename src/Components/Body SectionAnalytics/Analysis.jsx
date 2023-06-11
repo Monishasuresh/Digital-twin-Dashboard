@@ -78,7 +78,7 @@ const ImageUpload = () => {
             onClick={(e) => {
             e.preventDefault();
             if (typeof window !== 'undefined') {
-                window.location.href = "http://192.168.90.239/";
+                window.location.href = "http://192.168.90.238/";
             }
             }}>Live Stream
         </button>
@@ -90,9 +90,10 @@ const ImageUpload = () => {
       <div className='predict'>
         {soil && <p className='soil'>  {soil}</p>}
         {Growth && <p className='growth'> {Growth}</p>}
+        {health && <p className='health'> {health}</p>}
       </div>
       {/* {results && <p>{results}</p>} */}
-      {/* {health && <p>Health of plant: {health}</p>} */}
+      
       {/* {imagePath && (
         <div>
 

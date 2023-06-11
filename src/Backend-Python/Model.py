@@ -9,6 +9,7 @@ import joblib
 import tensorflow as tf
 from tensorflow import keras
 from keras.preprocessing import image
+from PIL import Image
 
 
 
@@ -72,7 +73,7 @@ def process_image():
     #model = health.load()
     #health = health.predict()
     
-    #health = health_plant(image_path)   
+    health = health_plant(image_path)   
     
     
     model = joblib.load('Fertility.joblib')
@@ -84,7 +85,7 @@ def process_image():
     print(growth)
     
     # Example results for demonstration
-    results = [ str(soil[0]), str(growth[0]), 'Result3' ] #health]
+    results = [ str(soil[0]), str(growth[0]), health]
 
     response = jsonify({'results': results})
     response.headers.add('Access-Control-Allow-Origin', 'http://localhost:3000')
@@ -243,8 +244,9 @@ def health_plant(image_path):
     test_image_path = image_path
     
     img_width, img_height = 224, 224
-    test_image = image.load_img(test_image_path, target_size=(img_width, img_height))
-    test_image = image.img_to_array(test_image)
+    test_image = Image.open(test_image_path)
+    test_image = test_image.resize((img_width, img_height))
+    test_image = np.array(test_image)
     test_image = np.expand_dims(test_image, axis=0)
     test_image = test_image / 255.0
     
