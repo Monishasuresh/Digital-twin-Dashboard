@@ -109,8 +109,18 @@
   background-color: #494545;
   box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
   border-radius: 4px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: relative;
+}
+.topdiv .imageview img {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
 }/*# sourceMappingURL=image.css.map */

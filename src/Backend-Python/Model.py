@@ -47,21 +47,6 @@ def process_image():
     # Provide the path to your image file
     #image_path = "C:/Users/admin/Desktop/Capstone Project/Code/Chilli images/capture1.jpg"
     
-    # Call the function to find plant dimensions
-    plant_height, plant_width = find_plant_dimensions(image_path)
-
-    # Call the function to calculate the leaf area
-    leaf_area = calculate_leaf_area(image_path)
-   
-    # Call the fuction to calculate the green percentage
-    green_percentage = green_percentage_plant(image_path)
-
-    # Calculate the chlorophyll content based on the green percentage (example formula)
-    chlorophyll_content = 0.01 * green_percentage
-
-    # Perform biomass estimation (replace with your own method)
-    biomass = 0.2 * plant_height + 10
-    
     lum = float(fetch_luminosity_data())
     hum = float(fetch_humidity_data())
     Mois = float(fetch_Mois_data())
@@ -73,19 +58,46 @@ def process_image():
     #model = health.load()
     #health = health.predict()
     
+    Tempsug = ''
+    Humsug = ''
+    lumsug = ''
+    Moissug = ''
+    Fersug = ''
+    
+    if(Temp<20):
+        Tempsug = 'Low'
+    elif(Temp>30):
+        Tempsug = 'High'
+        
+    if(hum<40):
+        Humsug = 'Low'
+    elif(hum>70):
+        Humsug = 'High'
+        
+    if(lum>800):
+        lumsug = 'Low'
+        
+    if(Mois>1000):
+        Moissug = 'Low'
+             
+
+    
     health = health_plant(image_path)   
-    
-    
     model = joblib.load('Fertility.joblib')
     soil = model.predict([[N,P,K]])
     print(soil)
     
+    if(soil == 'Fertile'):
+        Fersug = 'Fertile soil typically indicates a well-balanced nutrient composition and good organic matter content.\nIt provides an ideal environment for plant growth and nutrient uptake.\nSuggestions to maintain the soil fertility:\n1. Continuously enhance the organic matter content by adding compost, well-rotted manure, or cover crops improves soil structure, water retention, and nutrient availability\n2.Ensure appropriate irrigation practices, avoiding overwatering or underwatering, and improving drainage.\n3.  Implement a crop rotation plan to minimize nutrient imbalances and pests.'
+    else :
+        Fersug = 'Infertile soil lacks essential nutrients and may have imbalances that hinder plant growth and productivity.low nutrient levels can effect plant growth in a number of ways including:1. reduced growth2. stunted roots3. yellowing leaves4. reduced flowering and fruitingsuggestions:1. use organic fertilizers which is rich in nitrogen (N), phosphorus (P) , potassium (K) to increase the npk level eg. well-rotted manure, seaweed-based fertilizers2. Avoid Overuse of Chemical Fertilizers3. Water Properly4. Rotate Nutrient-Hungry Crops with Legumes: Practice crop rotation by alternating nutrient-hungry plants with legumes like beans, peas, or lentils. Legumes fix nitrogen in the soil, helping to increase the NPK levels naturally for the subsequent crops.5. Use Organic Soil Amendments: Add organic soil amendments that naturally contain NPK elements. For example, incorporate compost, aged manure, or worm castings into the soil.'
+    
     model = joblib.load('Growth.joblib')
-    growth = model.predict([[plant_height,plant_width,chlorophyll_content, Temp,hum , lum]])
+    growth = model.predict([[ Temp,hum,lum,Mois]])
     print(growth)
     
     # Example results for demonstration
-    results = [ str(soil[0]), str(growth[0]), health]
+    results = [ str(soil[0]), str(growth[0]), health, Tempsug, Humsug, lumsug, Moissug, Fersug]
 
     response = jsonify({'results': results})
     response.headers.add('Access-Control-Allow-Origin', 'http://localhost:3000')
@@ -94,37 +106,6 @@ def process_image():
 
 # Define a route and its corresponding view function
 @app.route('/')
-def hello():
-    return "Hello, World!"
-
-def find_plant_dimensions(image_path):
-    # Load the image
-    image = cv2.imread(image_path)
-
-    # Convert the image to grayscale
-    gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-    
-    # Find contours of the plant
-    contours, _ = cv2.findContours(gray, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
-
-    # Find the largest contour (assuming it's the plant)
-    largest_contour = max(contours, key=cv2.contourArea)
-
-    # Find the bounding rectangle of the largest contour
-    x, y, w, h = cv2.boundingRect(largest_contour)
-
-    # Draw the bounding rectangle on the image
-    cv2.rectangle(image, (x, y), (x + w, y + h), (0, 255, 0), 2)
-
-    # Display the image with the bounding rectangle
-    # cv2.imshow("Image", image)
-    # cv2.waitKey(0)
-
-    # Calculate the height and width of the plant
-    height = h*(0.0264)
-    width = w*(0.0264)
-
-    return height, width
 
 def fetch_luminosity_data():
     try:
@@ -184,61 +165,6 @@ def fetch_Temp_data():
     except Exception as error:
         print('Error fetching Temperature data:', error)
 
-
-
-
-def calculate_leaf_area(image_path):
-    # Load the image
-    image = cv2.imread(image_path)
-
-    # Convert the image to grayscale
-    gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-
-    # Apply image thresholding
-    _, threshold = cv2.threshold(gray, 0, 255, cv2.THRESH_BINARY_INV + cv2.THRESH_OTSU)
-
-    # Find contours in the thresholded image
-    contours, _ = cv2.findContours(threshold, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
-
-    # Initialize total leaf area
-    total_area = 0
-
-    # Iterate over each contour and calculate leaf area
-    for contour in contours:
-        # Calculate contour area
-        area = cv2.contourArea(contour)
-        total_area += area
-
-        # Draw contour on the image (optional)
-        cv2.drawContours(image, [contour], -1, (0, 255, 0), 2)
-
-    # Display the image with contours (optional)
-    #cv2.imshow("Image", image)
-    #cv2.waitKey(0)
-
-    return total_area
-
-def green_percentage_plant(image_path):
-    
-    # Load the image
-    image = cv2.imread(image_path)
-
-    # Convert the image to the HSV color space
-    hsv = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
-
-    # Define the lower and upper bounds for green color in HSV
-    lower_green = np.array([36, 25, 25])
-    upper_green = np.array([86, 255, 255])
-
-    # Threshold the image to get the green areas
-    mask = cv2.inRange(hsv, lower_green, upper_green)
-
-    # Calculate the percentage of green pixels in the image
-    total_pixels = np.prod(mask.shape[:2])
-    green_pixels = np.count_nonzero(mask)
-    green_percentage = (green_pixels / total_pixels) * 100
-    
-    return green_percentage
 
 def health_plant(image_path):
     test_image_path = image_path

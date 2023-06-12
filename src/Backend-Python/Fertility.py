@@ -5,7 +5,7 @@ from sklearn.metrics import accuracy_score
 import joblib
 
 # Read the CSV file
-data = pd.read_csv('C:/Users/admin/Desktop/Capstone Project/Code/Data/Soil data.csv')
+data = pd.read_csv('C:/Users/admin/Desktop/Capstone Project/Code/Final-Code/Digital-twin-Dashboard/src/Data/SoilFertility.csv')
 
 # Split the data into features (NPK values) and labels
 X = data.iloc[:, 0:3]
@@ -36,7 +36,7 @@ print("Model Accuracy:", accuracy)
 # Predict the fertility of a new soil sample
 new_sample = [[6, 7, 5]]  # NPK values of the new soil sample
 prediction = model.predict(new_sample)
-print(type(prediction))
+print((prediction))
 # Interpret the prediction
 if prediction[0] == "Fertile":
     print("The soil is predicted to be fertile.")

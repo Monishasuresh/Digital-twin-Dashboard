@@ -9,7 +9,11 @@ const ImageUpload = () => {
   const [Growth, setGrowth] = useState([]);
   const [soil, setSoil] = useState([]);
   const [health, setHealth] = useState([]);
-  
+  const [tempsug, settempsug] = useState([]);
+  const [humsug, sethumsug] = useState([]);
+  const [moissug, setmoissug] = useState([]);
+  const [lumsug, setlumsug] = useState([]);
+  const [Fersug, setFersug] = useState([]);
 
   const handleFileChange = (event) => {
     setSelectedFile(event.target.files[0]);
@@ -61,6 +65,11 @@ const ImageUpload = () => {
         setSoil(data.results[0]);
         setGrowth(data.results[1]);
         setHealth(data.results[2]);
+        settempsug(data.results[3]);
+        sethumsug(data.results[4]);
+        setlumsug(data.results[5]);
+        setmoissug(data.results[6]);
+        setFersug(data.results[7]);
       } else {
         console.log('Failed to fetch results');
       }
@@ -91,6 +100,12 @@ const ImageUpload = () => {
         {soil && <p className='soil'>  {soil}</p>}
         {Growth && <p className='growth'> {Growth}</p>}
         {health && <p className='health'> {health}</p>}
+        {tempsug && <p > tempsug :{tempsug}</p>}
+        {humsug && <p > humsug :{humsug}</p>}
+        {lumsug && <p > lumsug :{lumsug}</p>}
+        {moissug && <p > moissug :{moissug}</p>}
+        {Fersug && <p >{Fersug}</p>}
+        
       </div>
       {/* {results && <p>{results}</p>} */}
       
