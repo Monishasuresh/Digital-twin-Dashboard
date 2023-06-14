@@ -88,7 +88,12 @@ def process_image():
     print(soil)
     
     if(soil == 'Fertile'):
-        Fersug = 'Fertile soil typically indicates a well-balanced nutrient composition and good organic matter content.\nIt provides an ideal environment for plant growth and nutrient uptake.\nSuggestions to maintain the soil fertility:\n1. Continuously enhance the organic matter content by adding compost, well-rotted manure, or cover crops improves soil structure, water retention, and nutrient availability\n2.Ensure appropriate irrigation practices, avoiding overwatering or underwatering, and improving drainage.\n3.  Implement a crop rotation plan to minimize nutrient imbalances and pests.'
+        Fersug = '''Fertile soil typically indicates a well-balanced nutrient composition and good organic matter content.\n
+        It provides an ideal environment for plant growth and nutrient uptake.\n
+        Suggestions to maintain the soil fertility:\n
+        1. Continuously enhance the organic matter content by adding compost, well-rotted manure, or cover crops improves soil structure, water retention, and nutrient availability.\n
+        2.Ensure appropriate irrigation practices, avoiding overwatering or underwatering, and improving drainage.\n
+        3.  Implement a crop rotation plan to minimize nutrient imbalances and pests.'''
     else :
         Fersug = 'Infertile soil lacks essential nutrients and may have imbalances that hinder plant growth and productivity.low nutrient levels can effect plant growth in a number of ways including:1. reduced growth2. stunted roots3. yellowing leaves4. reduced flowering and fruitingsuggestions:1. use organic fertilizers which is rich in nitrogen (N), phosphorus (P) , potassium (K) to increase the npk level eg. well-rotted manure, seaweed-based fertilizers2. Avoid Overuse of Chemical Fertilizers3. Water Properly4. Rotate Nutrient-Hungry Crops with Legumes: Practice crop rotation by alternating nutrient-hungry plants with legumes like beans, peas, or lentils. Legumes fix nitrogen in the soil, helping to increase the NPK levels naturally for the subsequent crops.5. Use Organic Soil Amendments: Add organic soil amendments that naturally contain NPK elements. For example, incorporate compost, aged manure, or worm castings into the soil.'
     

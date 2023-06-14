@@ -42,20 +42,18 @@
 }
 
 .imageview {
-  padding-top: 5rem;
-  background: var(--bgColor);
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  border-radius: 1rem;
+  left: 26%;
+  top: 50%;
 }
 
 .topdiv {
   justify-content: space-between;
 }
 .topdiv .predict {
+  position: relative;
+  left: 26%;
+  top: 50%;
   display: flex;
   justify-content: space-between;
   padding-top: 2rem;
@@ -123,4 +121,26 @@
   left: 0;
   bottom: 0;
   right: 0;
+}
+.topdiv .btn {
+  background: var(--PrimaryColor);
+  color: var(--whiteColor);
+  font-size: 13px;
+  font-weight: 800;
+  padding: 0.8rem 1.5rem;
+  border-radius: 10px;
+  font-weight: 400;
+  margin-left: 4rem;
+  transition: 0.3s ease;
+}
+.topdiv .btn:hover {
+  background: var(--hoverColor);
+  color: var(--blackColor);
+}
+.topdiv .btn .icon {
+  margin-left: 0.5rem;
+}
+.topdiv .btn:hover {
+  color: var(--primaryColor);
+  background: var(--paleGreen);
 }/*# sourceMappingURL=image.css.map */

@@ -81,9 +81,9 @@ const ImageUpload = () => {
   return (
     <div className='topdiv'>
       <form onSubmit={handleSubmit} >
-        <input type="file" accept="image/*" onChange={handleFileChange} />
-        <button type="submit" className='upload-img'>Upload</button>
-        <button type='button' className='upload'
+        <input className= 'choosefile' type="file" accept="image/*" onChange={handleFileChange} />
+        <button type="submit" className='btn'>Upload</button>
+        <button type='button' className='btn'
             onClick={(e) => {
             e.preventDefault();
             if (typeof window !== 'undefined') {
@@ -93,20 +93,19 @@ const ImageUpload = () => {
         </button>
       </form>
       {uploadStatus && <p style={{color:'green', fontSize:'bold'}}>{uploadStatus}</p>}
-      <div className='imageview'>
+      <div className="imageview">
     {selectedFile && <img src={URL.createObjectURL(selectedFile)} alt="Uploaded"  />}
       </div >
       <div className='predict'>
         {soil && <p className='soil'>  {soil}</p>}
         {Growth && <p className='growth'> {Growth}</p>}
         {health && <p className='health'> {health}</p>}
-        {tempsug && <p > tempsug :{tempsug}</p>}
+        {/* {tempsug && <p > tempsug :{tempsug}</p>}
         {humsug && <p > humsug :{humsug}</p>}
         {lumsug && <p > lumsug :{lumsug}</p>}
-        {moissug && <p > moissug :{moissug}</p>}
-        {Fersug && <p >{Fersug}</p>}
-        
+        {moissug && <p > moissug :{moissug}</p>} */}
       </div>
+      {/* {Fersug && <p className='output'>{Fersug}</p>} */}
       {/* {results && <p>{results}</p>} */}
       
       {/* {imagePath && (
