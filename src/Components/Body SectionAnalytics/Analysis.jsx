@@ -80,7 +80,7 @@ const ImageUpload = () => {
 
   return (
     <div className='topdiv'>
-      <form onSubmit={handleSubmit} >
+      <form onSubmit={handleSubmit}  >
         <input className= 'choosefile' type="file" accept="image/*" onChange={handleFileChange} />
         <button type="submit" className='btn'>Upload</button>
         <button type='button' className='btn'
@@ -96,10 +96,10 @@ const ImageUpload = () => {
       <div className="imageview">
     {selectedFile && <img src={URL.createObjectURL(selectedFile)} alt="Uploaded"  />}
       </div >
-      <div className='predict'>
-        {soil && <p className='soil'>  {soil}</p>}
-        {Growth && <p className='growth'> {Growth}</p>}
-        {health && <p className='health'> {health}</p>}
+      <div className="predict">
+        {soil && <p className="soil">  {soil}</p>}
+        {Growth && <p className="growth"> {Growth}</p>}
+        {health && <p className="health"> {health}</p>}
         {/* {tempsug && <p > tempsug :{tempsug}</p>}
         {humsug && <p > humsug :{humsug}</p>}
         {lumsug && <p > lumsug :{lumsug}</p>}
