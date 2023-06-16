@@ -14,6 +14,8 @@ const ImageUpload = () => {
   const [moissug, setmoissug] = useState([]);
   const [lumsug, setlumsug] = useState([]);
   const [Fersug, setFersug] = useState([]);
+  const [Growsug, setGrowsug] = useState([]);
+  const [Healthsug, setHealthsug] = useState([]);
 
   const handleFileChange = (event) => {
     setSelectedFile(event.target.files[0]);
@@ -70,6 +72,8 @@ const ImageUpload = () => {
         setlumsug(data.results[5]);
         setmoissug(data.results[6]);
         setFersug(data.results[7]);
+        setHealthsug(data.results[8]);
+        setGrowsug(data.results[9]);
       } else {
         console.log('Failed to fetch results');
       }
@@ -97,9 +101,9 @@ const ImageUpload = () => {
     {selectedFile && <img src={URL.createObjectURL(selectedFile)} alt="Uploaded"  />}
       </div >
       <div className="predict">
-        {soil && <p className="soil">  {soil}</p>}
-        {Growth && <p className="growth"> {Growth}</p>}
-        {health && <p className="health"> {health}</p>}
+        {soil && <p className="soil" data-soil={soil} dangerouslySetInnerHTML={{ __html: Fersug }}></p>}
+        {Growth && <p className="growth" data-growth={Growth} dangerouslySetInnerHTML={{ __html: Growsug }}></p>}
+        {health && <p className="health" data-health={health} dangerouslySetInnerHTML={{ __html: Healthsug }}></p>}
         {/* {tempsug && <p > tempsug :{tempsug}</p>}
         {humsug && <p > humsug :{humsug}</p>}
         {lumsug && <p > lumsug :{lumsug}</p>}

@@ -60,31 +60,42 @@
     justify-content: space-between;
     .predict{
          position: relative;
-        // left: 16%;
-         top: 80%;
+         left: 0;
+         top: 0;
        display: flex; 
        justify-content: space-between;
-       padding-top: 15rem;
+       padding-top: 5rem;
+       padding-bottom: 5rem;
 
        
        .soil{
-        width: 400px;
+        width: 350px;
          height: 260px;
          display: flex;
          padding-top: 2rem;
-         background: var(--bgColor);
-         align-items: center;
+         background: lightblue;
+         align-items: flex-start;
          justify-content: center;
-         overflow: hidden;
+         color: darkblue;
+         overflow: auto;
+         font-size: medium;
          // border-radius: 1rem;
-         position: absolute;
-         top: 4rem;
-         left: 2rem;
+         position: relative;
+         top: 0;
+         left: 0rem;
          box-shadow: 2px 2px 8px var(--greyText);
     }
+    .soil ul {
+        list-style-type: disc; /* Set bullet point style */
+        padding-left: 1rem; /* Add left padding to indent the bullet points */
+      }
+      
+    .soil li {
+        margin-bottom: 0.5rem; /* Add some spacing between the bullet points */
+      }
 
     .soil::before {
-        content: "Fertility";
+        content: "Fertility : " attr(data-soil);
          font-size: var(--h2FontSize);
          color: var(--darkGreen);
                 font-weight: 500;
@@ -93,7 +104,92 @@
         top: 0;
         left: 0;
         width: 100%;
-        height: 3rem;
+        height: 2rem;
+        background-color: #d3d3d3;
+        box-shadow: 2px 2px 8px var(--greyText);
+        line-height: 2.5rem;
+      }
+
+      .growth{
+        width: 350px;
+         height: 260px;
+         display: flex;
+         padding-top: 2rem;
+         color: darkblue;
+         background: lightblue;
+         font-size: medium;
+         align-items: flex-start;
+         justify-content: center;
+         overflow: hidden;
+         // border-radius: 1rem;
+         position: relative;
+         top: 0;
+         left: 2rem;
+         box-shadow: 2px 2px 8px var(--greyText);
+    }
+    .growth ul {
+        list-style-type: disc; /* Set bullet point style */
+        padding-left: 1rem; /* Add left padding to indent the bullet points */
+      }
+      
+    .growth li {
+        margin-bottom: 0.5rem; /* Add some spacing between the bullet points */
+      }
+
+    .growth::before {
+        content: "Growth Condition : "attr(data-growth);
+         font-size: var(--h2FontSize);
+         color: var(--darkGreen);
+                font-weight: 500;
+                
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 2rem;
+        background-color: #D3D3D3;
+        box-shadow: 2px 2px 8px var(--greyText);
+        line-height: 2.5rem;
+      }
+
+      .health{
+        width: 350px;
+         height: 260px;
+         display: flex;
+         padding-top: 2rem;
+         background: lightblue;
+         color: darkblue;
+         font-size: medium;
+         align-items: flex-start;
+        //  justify-content: center;
+         overflow: hidden;
+         // border-radius: 1rem;
+         position: relative;
+         top: 0;
+         left: 4rem;
+         bottom: 2rem;
+         box-shadow: 2px 2px 8px var(--greyText);
+    }
+    .health ul {
+        list-style-type: disc; /* Set bullet point style */
+        padding-left: 1rem; /* Add left padding to indent the bullet points */
+      }
+      
+    .health li {
+        margin-bottom: 0.5rem; /* Add some spacing between the bullet points */
+      }
+
+    .health::before {
+        content: "Health : "attr(data-health);
+         font-size: var(--h2FontSize);
+         color: var(--darkGreen);
+                font-weight: 500;
+                
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 2rem;
         background-color: #D3D3D3;
         box-shadow: 2px 2px 8px var(--greyText);
         line-height: 2.5rem;
@@ -143,6 +239,8 @@
     //     color: #ccb1b1;
     //     font-size: 18px;
     // }
+
+    
 
 
     .imageview{

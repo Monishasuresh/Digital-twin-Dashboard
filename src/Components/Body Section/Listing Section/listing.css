@@ -74,11 +74,11 @@
   transform: translateX(-50%);
 }
 .listingSection .paramContainer .humidity-container .humidity-percentage {
-  color: var(--whiteColor);
+  color: white;
   font-weight: 500;
 }
 .listingSection .paramContainer .humidity-container .percentageText {
-  color: var(--whiteColor);
+  color: white;
   font-size: x-small;
   position: absolute;
   top: 73%;
@@ -91,7 +91,8 @@
   height: 145px;
   display: flex;
   padding-top: 2rem;
-  background: white;
+  background: #004137;
+  color: white;
   align-items: center;
   justify-content: center;
   overflow: hidden;
@@ -111,11 +112,11 @@
   transform: translateX(-50%);
 }
 .listingSection .paramContainer .temperature-container .temperature-percentage {
-  color: var(--blackColor);
+  color: white;
   font-weight: 500;
 }
 .listingSection .paramContainer .temperature-container .percentageText {
-  color: var(--blackColor);
+  color: white;
   font-size: x-small;
   position: absolute;
   top: 73%;
@@ -128,7 +129,8 @@
   height: 145px;
   display: flex;
   padding-top: 2rem;
-  background: white;
+  background: #004137;
+  color: white;
   align-items: center;
   justify-content: center;
   overflow: hidden;
@@ -148,11 +150,11 @@
   transform: translateX(-50%);
 }
 .listingSection .paramContainer .moisture-container .temperature-percentage {
-  color: var(--blackColor);
+  color: white;
   font-weight: 500;
 }
 .listingSection .paramContainer .moisture-container .percentageText {
-  color: var(--blackColor);
+  color: white;
   font-size: x-small;
   position: absolute;
   top: 73%;
@@ -165,7 +167,8 @@
   height: 145px;
   display: flex;
   padding-top: 2rem;
-  background: white;
+  background: #004137;
+  color: white;
   align-items: center;
   justify-content: center;
   overflow: hidden;
@@ -185,11 +188,11 @@
   transform: translateX(-50%);
 }
 .listingSection .paramContainer .luminosity-container .temperature-percentage {
-  color: var(--blackColor);
+  color: white;
   font-weight: 500;
 }
 .listingSection .paramContainer .luminosity-container .percentageText {
-  color: var(--blackColor);
+  color: white;
   font-size: x-small;
   position: absolute;
   top: 73%;
@@ -202,7 +205,8 @@
   height: 145px;
   display: flex;
   padding-top: 2rem;
-  background: white;
+  background: #004137;
+  color: white;
   align-items: center;
   justify-content: center;
   overflow: hidden;
@@ -222,11 +226,11 @@
   transform: translateX(-50%);
 }
 .listingSection .paramContainer .N-container .temperature-percentage {
-  color: var(--blackColor);
+  color: white;
   font-weight: 500;
 }
 .listingSection .paramContainer .N-container .percentageText {
-  color: var(--blackColor);
+  color: white;
   font-size: x-small;
   position: absolute;
   top: 73%;
@@ -239,7 +243,8 @@
   height: 145px;
   display: flex;
   padding-top: 2rem;
-  background: white;
+  background: #004137;
+  color: white;
   align-items: center;
   justify-content: center;
   overflow: hidden;
@@ -259,11 +264,11 @@
   transform: translateX(-50%);
 }
 .listingSection .paramContainer .P-container .temperature-percentage {
-  color: var(--blackColor);
+  color: white;
   font-weight: 500;
 }
 .listingSection .paramContainer .P-container .percentageText {
-  color: var(--blackColor);
+  color: white;
   font-size: x-small;
   position: absolute;
   top: 73%;
@@ -276,10 +281,11 @@
   height: 145px;
   display: flex;
   padding-top: 2rem;
-  background: white;
+  background: #004137;
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  color: white;
   border-radius: 1rem;
   position: absolute;
   top: 21rem;
@@ -296,11 +302,11 @@
   transform: translateX(-50%);
 }
 .listingSection .paramContainer .K-container .temperature-percentage {
-  color: var(--blackColor);
+  color: white;
   font-weight: 500;
 }
 .listingSection .paramContainer .K-container .percentageText {
-  color: var(--blackColor);
+  color: white;
   font-size: x-small;
   position: absolute;
   top: 73%;

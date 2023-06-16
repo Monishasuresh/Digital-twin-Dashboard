@@ -63,6 +63,8 @@ def process_image():
     lumsug = ''
     Moissug = ''
     Fersug = ''
+    Growsug = ''
+    Healthsug = ''
     
     if(Temp<20):
         Tempsug = 'Low'
@@ -88,21 +90,87 @@ def process_image():
     print(soil)
     
     if(soil == 'Fertile'):
-        Fersug = '''Fertile soil typically indicates a well-balanced nutrient composition and good organic matter content.\n
-        It provides an ideal environment for plant growth and nutrient uptake.\n
-        Suggestions to maintain the soil fertility:\n
-        1. Continuously enhance the organic matter content by adding compost, well-rotted manure, or cover crops improves soil structure, water retention, and nutrient availability.\n
-        2.Ensure appropriate irrigation practices, avoiding overwatering or underwatering, and improving drainage.\n
-        3.  Implement a crop rotation plan to minimize nutrient imbalances and pests.'''
+        Fersug = '''
+                <ul>
+                    <li>Fertile soil typically indicates a well-balanced nutrient composition and good organic matter content.</li>
+                    <li>Suggestions :</li>
+                    <ol>
+                        <li>1)Continuously enhance the organic matter content by adding compost.</li>
+                        <li>2)Ensure appropriate irrigation practices.</li>
+                        <li>3)Implement a crop rotation plan to minimize nutrient imbalances and pests.</li>
+                    </ol>
+                </ul>
+                '''
+
     else :
-        Fersug = 'Infertile soil lacks essential nutrients and may have imbalances that hinder plant growth and productivity.low nutrient levels can effect plant growth in a number of ways including:1. reduced growth2. stunted roots3. yellowing leaves4. reduced flowering and fruitingsuggestions:1. use organic fertilizers which is rich in nitrogen (N), phosphorus (P) , potassium (K) to increase the npk level eg. well-rotted manure, seaweed-based fertilizers2. Avoid Overuse of Chemical Fertilizers3. Water Properly4. Rotate Nutrient-Hungry Crops with Legumes: Practice crop rotation by alternating nutrient-hungry plants with legumes like beans, peas, or lentils. Legumes fix nitrogen in the soil, helping to increase the NPK levels naturally for the subsequent crops.5. Use Organic Soil Amendments: Add organic soil amendments that naturally contain NPK elements. For example, incorporate compost, aged manure, or worm castings into the soil.'
+        Fersug = '''
+                <ul>
+                    <li>Infertile soil lacks essential nutrients and may have imbalances that hinder plant growth and productivity.</li>
+                    <li>Suggestions :</li>
+                    <ol>
+                        <li>1)use organic fertilizers which is rich in nitrogen (N), phosphorus (P) , potassium (K) </li>
+                        <li>2)Avoid Overuse of Chemical Fertilizers.</li>
+                        <li>3)Water Properly.</li>
+                        <li>4)Use Organic Soil Amendments. For example : incorporate compost, aged manure, etc... .</li>
+                    </ol>
+                </ul>
+                '''
+        
+    if(health == 'Unhealthy'):
+        Healthsug = '''
+                    <ul>
+                        <li>Suggestions :</li>
+                        <ol>
+                            <li>1)Remove affected leaves.</li>
+                            <li>2)Treat for pests and diseases.</li>
+                            <li>3)Prune and shape the plant.</li>
+                        </ol>
+                    </ul>
+                    '''
+    else :
+        Healthsug = '''
+                    <ul>
+                        <li>Suggestions :</li>
+                        <ol>
+                            <li>1)Ensure regular watering.</li>
+                            <li>2)Monitor sunlight exposure.</li>
+                            <li>3)Implement proper nutrient management.</li>
+                        </ol>
+                    </ul>
+                    '''
     
+           
     model = joblib.load('Growth.joblib')
     growth = model.predict([[ Temp,hum,lum,Mois]])
     print(growth)
     
+    if(growth == 'GOOD') :
+        Growsug = '''
+                    <ul>
+                        <li>Suggestions :</li>
+                        <ol>
+                            <li>1)Maintain optimal temperature.</li>
+                            <li>2)Monitor humidity levels.</li>
+                            <li>3)Provide adequate moisture and NPK levels.</li>
+                        </ol>
+                    </ul>
+                    '''
+    else :
+        Growsug = '''
+                    <ul>
+                        <li>Suggestions :</li>
+                        <ol>
+                            <li>1)Adjust temperature and provide suitable conditions.</li>
+                            <li>2)Modify humidity and moisture levels.</li>
+                            <li>3)Protect from pests and diseases.</li>
+                            <li>4)Enhance soil fertility.</li>
+                        </ol>
+                    </ul>
+                    '''
+        
+        
     # Example results for demonstration
-    results = [ str(soil[0]), str(growth[0]), health, Tempsug, Humsug, lumsug, Moissug, Fersug]
+    results = [ str(soil[0]), str(growth[0]), health, Tempsug, Humsug, lumsug, Moissug, Fersug, Healthsug, Growsug]
 
     response = jsonify({'results': results})
     response.headers.add('Access-Control-Allow-Origin', 'http://localhost:3000')
