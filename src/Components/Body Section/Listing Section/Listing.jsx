@@ -145,7 +145,7 @@ const Listing = () => {
 
             <img src={leaf} alt="leaf"/>
             {humidity !== null ? (
-              <div className="humidity-percentage">{humidity} g.m-3</div>
+              <div className="humidity">{humidity} %</div>
             ) : (
               <div></div>
             )}
@@ -180,7 +180,7 @@ const Listing = () => {
 
             <img src={mois} alt="leaf"/>
             {moisture !== null ? (
-              <div className="moisture-percentage">{moisture}% VMC</div>
+              <div className="moisture-percentage">{moisture}</div>
             ) : (
               <div></div>
             )}
